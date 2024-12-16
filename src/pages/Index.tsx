@@ -14,7 +14,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
               alt="Solar Logo" 
-              className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out]"
+              className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out] animate-float"
             />
           </div>
           
