@@ -33,22 +33,22 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-48 bg-rich-black border border-gold/20">
                 <DropdownMenuItem asChild>
-                  <Link to="/" className="text-gold hover:text-gold-light w-full">
+                  <Link to="/" className="text-gold hover:text-gold-light w-full font-cinzel">
                     Home
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/gallery" className="text-gold hover:text-gold-light w-full">
+                  <Link to="/gallery" className="text-gold hover:text-gold-light w-full font-cinzel">
                     Gallery
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/products" className="text-gold hover:text-gold-light w-full">
+                  <Link to="/products" className="text-gold hover:text-gold-light w-full font-cinzel">
                     Products
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/contact" className="text-gold hover:text-gold-light w-full">
+                  <Link to="/contact" className="text-gold hover:text-gold-light w-full font-cinzel">
                     Contact
                   </Link>
                 </DropdownMenuItem>
