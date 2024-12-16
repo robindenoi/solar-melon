@@ -46,8 +46,6 @@ const Gallery = () => {
   return (
     <div className="min-h-screen pt-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-cinzel text-gold mb-8">Our Gallery</h1>
-        
         <div className="bg-rich-black border border-gold/20 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-cinzel text-gold mb-4">Exclusive Member Content</h2>
           <p className="text-gold/80 mb-6">
