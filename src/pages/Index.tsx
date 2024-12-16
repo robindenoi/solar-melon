@@ -50,33 +50,6 @@ const Index = () => {
               </button>
             </div>
           </section>
-          
-          {/* Product Section */}
-          <section className="py-24 bg-gradient-to-b from-rich-black to-black">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-cinzel text-center mb-16 text-gold">
-                Our Collection
-              </h2>
-              
-              <div className="max-w-md mx-auto bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/e3d95c36-4b5f-418f-a77e-68be08f2d5d1.png" 
-                  alt="Melon Solar Bottle" 
-                  className="w-full h-auto"
-                />
-                <div className="p-6 text-center">
-                  <h3 className="text-2xl font-cinzel text-gold mb-2">Melon Solar</h3>
-                  <p className="text-gold/80 mb-4">17% Alcohol</p>
-                  <button 
-                    onClick={() => navigate('/products')}
-                    className="px-6 py-2 bg-gold hover:bg-gold-light text-rich-black font-cinzel rounded transition-colors duration-300"
-                  >
-                    Buy Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
         </>
       )}
     </div>
