@@ -20,11 +20,7 @@ const Products = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-2xl md:text-3xl font-cinzel font-light mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
-            Our Products
-          </h1>
-          
-          <div className="max-w-lg mx-auto bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg overflow-hidden">
+          <div className="max-w-xs mx-0 bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg overflow-hidden">
             <div className="relative group">
               <img 
                 src="/lovable-uploads/0d6985b6-d515-4d2e-9d79-8c8ad3bb0406.png"
@@ -34,10 +30,10 @@ const Products = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             
-            <div className="p-8 text-center">
-              <h3 className="text-2xl font-cinzel text-gold mb-4">Solar Melon</h3>
-              <p className="text-gold/80 mb-4 font-light">A taste of Italian sunshine, crafted with the finest melons. 17% Alcohol.</p>
-              <p className="text-gold mb-6 font-cinzel">€45.00</p>
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-cinzel text-gold mb-2">Solar Melon</h3>
+              <p className="text-gold/80 mb-2 text-sm font-light">17% Alcohol</p>
+              <p className="text-gold mb-4 font-cinzel">€45.00</p>
               
               <Button
                 onClick={handleOrder}
