@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
+import { Lock } from "lucide-react";
 
 const Gallery = () => {
   const { toast } = useToast();
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,49 +21,33 @@ const Gallery = () => {
       });
       return;
     }
+    setIsLoggedIn(true);
     toast({
       title: "Success!",
       description: "Welcome to our exclusive content section!",
     });
-    // Here you would typically handle authentication
   };
+
+  const partyImages = [
+    {
+      src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      alt: "Elegant Party Setting"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      alt: "Luxury Event Space"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1518877593221-1f28583780b4",
+      alt: "VIP Party Area"
+    }
+  ];
 
   return (
     <div className="min-h-screen pt-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-cinzel text-gold mb-8">Our Gallery</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {/* Public Gallery Images */}
-          <Card className="bg-rich-black border-gold/20">
-            <CardContent className="p-4">
-              <img 
-                src="https://source.unsplash.com/photo-1615729947596-a598e5de0ab3" 
-                alt="Gallery Image 1"
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-            </CardContent>
-          </Card>
-          <Card className="bg-rich-black border-gold/20">
-            <CardContent className="p-4">
-              <img 
-                src="https://source.unsplash.com/photo-1504893524553-b855bce32c67" 
-                alt="Gallery Image 2"
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-            </CardContent>
-          </Card>
-          <Card className="bg-rich-black border-gold/20">
-            <CardContent className="p-4">
-              <img 
-                src="https://source.unsplash.com/photo-1469474968028-56623f02e42e" 
-                alt="Gallery Image 3"
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-            </CardContent>
-          </Card>
-        </div>
-
         <div className="bg-rich-black border border-gold/20 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-cinzel text-gold mb-4">Exclusive Member Content</h2>
           <p className="text-gold/80 mb-6">
@@ -108,6 +93,27 @@ const Gallery = () => {
               </Button>
             </form>
           )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {partyImages.map((image, index) => (
+            <Card key={index} className="bg-rich-black border-gold/20 relative overflow-hidden">
+              <CardContent className="p-4">
+                <div className="relative">
+                  <img 
+                    src={image.src}
+                    alt={image.alt}
+                    className={`w-full h-48 object-cover rounded-lg ${!isLoggedIn ? 'blur-sm' : ''}`}
+                  />
+                  {!isLoggedIn && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg">
+                      <Lock className="w-8 h-8 text-gold" />
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </div>
