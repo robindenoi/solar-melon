@@ -20,7 +20,7 @@ const Products = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-xs mx-0 bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg overflow-hidden">
+          <div className="max-w-xs mx-auto bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg overflow-hidden">
             <div className="relative group">
               <img 
                 src="/lovable-uploads/0d6985b6-d515-4d2e-9d79-8c8ad3bb0406.png"
