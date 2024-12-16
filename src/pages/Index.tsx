@@ -10,11 +10,11 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
         <div className="container mx-auto px-4 pt-20 text-center relative">
-          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-10">
+          <div className="mb-8">
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
               alt="Solar Logo" 
-              className="w-16 h-16 mx-auto animate-float"
+              className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out] animate-float"
             />
           </div>
           
