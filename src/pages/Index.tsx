@@ -1,6 +1,9 @@
 import Navbar from "@/components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-rich-black">
       <Navbar />
@@ -22,7 +25,10 @@ const Index = () => {
             A Taste of Italian Sunshine
           </h1>
           
-          <button className="px-8 py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300">
+          <button 
+            onClick={() => navigate('/products')}
+            className="px-8 py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300"
+          >
             Explore Our Products
           </button>
         </div>
@@ -44,7 +50,10 @@ const Index = () => {
             <div className="p-6 text-center">
               <h3 className="text-2xl font-cinzel text-gold mb-2">Melon Solar</h3>
               <p className="text-gold/80 mb-4">17% Alcohol</p>
-              <button className="px-6 py-2 bg-gold hover:bg-gold-light text-rich-black font-cinzel rounded transition-colors duration-300">
+              <button 
+                onClick={() => navigate('/products')}
+                className="px-6 py-2 bg-gold hover:bg-gold-light text-rich-black font-cinzel rounded transition-colors duration-300"
+              >
                 Buy Now
               </button>
             </div>
