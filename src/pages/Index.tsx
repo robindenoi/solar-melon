@@ -1,4 +1,3 @@
-import { Sun } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const Index = () => {
@@ -13,7 +12,11 @@ const Index = () => {
         <div className="container mx-auto px-4 pt-20 text-center relative">
           <div className="animate-shimmer gold-gradient inline-block p-0.5 rounded-full mb-8">
             <div className="bg-rich-black p-4 rounded-full">
-              <Sun className="w-16 h-16 text-gold" />
+              <img 
+                src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
+                alt="Solar Logo" 
+                className="w-16 h-16"
+              />
             </div>
           </div>
           
@@ -21,7 +24,7 @@ const Index = () => {
             A Taste of Italian Sunshine
           </h1>
           
-          <p className="text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-gold/80 max-w-2xl mx-auto mb-12">
             In the picturesque town of Cagli, Italy, Melon Solar is crafted with unparalleled passion and tradition.
           </p>
           
@@ -46,7 +49,7 @@ const Index = () => {
             />
             <div className="p-6 text-center">
               <h3 className="text-2xl font-cinzel text-gold mb-2">Melon Solar</h3>
-              <p className="text-cream/80 mb-4">17% Alcohol</p>
+              <p className="text-gold/80 mb-4">17% Alcohol</p>
               <button className="px-6 py-2 bg-gold hover:bg-gold-light text-rich-black font-cinzel rounded transition-colors duration-300">
                 Buy Now
               </button>

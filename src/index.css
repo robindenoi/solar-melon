@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 0%;
+    --foreground: 45 47% 58%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 0%;
+    --card-foreground: 45 47% 58%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 45 47% 58%;
 
-    --primary: 47 65% 52%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 45 47% 58%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 5%;
+    --secondary-foreground: 45 47% 58%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 0 0% 5%;
+    --muted-foreground: 45 47% 38%;
 
-    --accent: 47 65% 52%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 45 47% 58%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 47% 58%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 47 65% 52%;
+    --border: 45 47% 58%;
+    --input: 45 47% 58%;
+    --ring: 45 47% 58%;
 
     --radius: 0.5rem;
   }
@@ -43,7 +43,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-rich-black text-cream font-inter;
+    @apply bg-rich-black text-gold font-inter;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-cinzel;
@@ -51,10 +51,10 @@
 }
 
 .gold-gradient {
-  background: linear-gradient(90deg, #D4AF37 0%, #F4C460 50%, #D4AF37 100%);
+  background: linear-gradient(90deg, #D4B053 0%, #E5C164 50%, #D4B053 100%);
   background-size: 200% auto;
 }
 
 .nav-link {
-  @apply relative text-cream hover:text-gold transition-colors duration-300 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-gold after:bottom-0 after:left-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
+  @apply relative text-gold hover:text-gold-light transition-colors duration-300 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-gold after:bottom-0 after:left-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
 }

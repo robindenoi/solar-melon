@@ -53,13 +53,13 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: {
-          DEFAULT: "#D4AF37",
-          light: "#F4C460",
-          dark: "#996515",
+          DEFAULT: "#D4B053", // Extracted from the sun image
+          light: "#E5C164",
+          dark: "#C39F42",
         },
         cream: "#F5F5DC",
         rich: {
-          black: "#1A1A1A",
+          black: "#000000", // Updated to pure black
         },
       },
       fontFamily: {

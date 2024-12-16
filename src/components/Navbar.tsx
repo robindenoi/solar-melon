@@ -1,4 +1,3 @@
-import { Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -7,7 +6,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 text-gold hover:text-gold-light transition-colors">
-            <Sun className="w-8 h-8" />
+            <img 
+              src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
+              alt="Solar Logo" 
+              className="w-8 h-8"
+            />
             <span className="font-cinzel text-xl">Solar</span>
           </Link>
           
