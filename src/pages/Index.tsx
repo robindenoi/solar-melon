@@ -18,13 +18,9 @@ const Index = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-cinzel font-bold mb-6 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-cinzel font-light mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
             A Taste of Italian Sunshine
           </h1>
-          
-          <p className="text-lg md:text-xl text-gold/80 max-w-2xl mx-auto mb-12">
-            In the picturesque town of Cagli, Italy, Melon Solar is crafted with unparalleled passion and tradition.
-          </p>
           
           <button className="px-8 py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300">
             Explore Our Products
