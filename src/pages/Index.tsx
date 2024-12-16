@@ -13,12 +13,21 @@ import {
 import { Button } from "@/components/ui/button";
 import { differenceInYears } from "date-fns";
 import { useToast } from "@/components/ui/use-toast";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Index = () => {
   const navigate = useNavigate();
   const [showAgeVerification, setShowAgeVerification] = useState(true);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const { toast } = useToast();
+  const [month, setMonth] = useState<number>(new Date().getMonth());
+  const [year, setYear] = useState<number>(new Date().getFullYear());
 
   useEffect(() => {
     // Check if user has already verified their age
@@ -49,6 +58,13 @@ const Index = () => {
     }
   };
 
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  const years = Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i);
+
   return (
     <div className="min-h-screen bg-rich-black">
       <AlertDialog open={showAgeVerification}>
@@ -63,14 +79,64 @@ const Index = () => {
             </AlertDialogDescription>
           </AlertDialogHeader>
           
-          <div className="flex justify-center py-4">
-            <Calendar
-              mode="single"
-              selected={selectedDate}
-              onSelect={handleDateSelect}
-              disabled={(date) => date > new Date()}
-              className="rounded-md border border-gold/20 bg-rich-black text-gold"
-            />
+          <div className="flex flex-col space-y-4">
+            <div className="flex justify-center space-x-4">
+              <Select
+                value={month.toString()}
+                onValueChange={(value) => setMonth(parseInt(value))}
+              >
+                <SelectTrigger className="w-[140px] bg-rich-black border-gold/20 text-gold">
+                  <SelectValue placeholder="Month" />
+                </SelectTrigger>
+                <SelectContent className="bg-rich-black border-gold/20">
+                  {months.map((monthName, index) => (
+                    <SelectItem
+                      key={index}
+                      value={index.toString()}
+                      className="text-gold hover:bg-gold/20"
+                    >
+                      {monthName}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+              <Select
+                value={year.toString()}
+                onValueChange={(value) => setYear(parseInt(value))}
+              >
+                <SelectTrigger className="w-[100px] bg-rich-black border-gold/20 text-gold">
+                  <SelectValue placeholder="Year" />
+                </SelectTrigger>
+                <SelectContent className="bg-rich-black border-gold/20 max-h-[200px]">
+                  {years.map((year) => (
+                    <SelectItem
+                      key={year}
+                      value={year.toString()}
+                      className="text-gold hover:bg-gold/20"
+                    >
+                      {year}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="flex justify-center">
+              <Calendar
+                mode="single"
+                selected={selectedDate}
+                onSelect={handleDateSelect}
+                disabled={(date) => date > new Date()}
+                defaultMonth={new Date(year, month)}
+                month={new Date(year, month)}
+                onMonthChange={(date) => {
+                  setMonth(date.getMonth());
+                  setYear(date.getFullYear());
+                }}
+                className="rounded-md border border-gold/20 bg-rich-black text-gold"
+              />
+            </div>
           </div>
           
           <AlertDialogFooter className="sm:justify-center">
