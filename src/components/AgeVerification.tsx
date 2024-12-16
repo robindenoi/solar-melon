@@ -59,7 +59,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
 
   return (
     <AlertDialog open={true}>
-      <AlertDialogContent className="bg-rich-black border border-gold/20">
+      <AlertDialogContent className="bg-rich-black border border-gold/20 w-[95%] max-w-lg mx-auto">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-gold font-cinzel text-xl text-center">
             Age Verification Required
@@ -71,15 +71,15 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
         </AlertDialogHeader>
         
         <div className="flex flex-col space-y-4">
-          <div className="flex justify-center space-x-4">
+          <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
             <Select
               value={month.toString()}
               onValueChange={(value) => setMonth(parseInt(value))}
             >
-              <SelectTrigger className="w-[140px] bg-rich-black border-gold/20 text-gold">
+              <SelectTrigger className="w-full sm:w-[140px] bg-rich-black border-gold/20 text-gold">
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
-              <SelectContent className="bg-rich-black border-gold/20">
+              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px]">
                 {months.map((monthName, index) => (
                   <SelectItem
                     key={index}
@@ -96,7 +96,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
               value={year.toString()}
               onValueChange={(value) => setYear(parseInt(value))}
             >
-              <SelectTrigger className="w-[100px] bg-rich-black border-gold/20 text-gold">
+              <SelectTrigger className="w-full sm:w-[100px] bg-rich-black border-gold/20 text-gold">
                 <SelectValue placeholder="Year" />
               </SelectTrigger>
               <SelectContent className="bg-rich-black border-gold/20 max-h-[200px]">
@@ -125,16 +125,16 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
                 setMonth(date.getMonth());
                 setYear(date.getFullYear());
               }}
-              className="rounded-md border border-gold/20 bg-rich-black text-gold"
+              className="rounded-md border border-gold/20 bg-rich-black text-gold w-full max-w-[350px]"
             />
           </div>
         </div>
         
-        <AlertDialogFooter className="sm:justify-center">
+        <AlertDialogFooter className="sm:justify-center mt-4">
           <Button
             variant="outline"
             onClick={() => window.location.href = "https://www.google.com"}
-            className="border-gold text-gold hover:bg-gold hover:text-rich-black font-cinzel"
+            className="w-full sm:w-auto border-gold text-gold hover:bg-gold hover:text-rich-black font-cinzel"
           >
             Exit Website
           </Button>
