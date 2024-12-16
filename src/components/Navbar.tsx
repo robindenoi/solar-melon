@@ -19,7 +19,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
               alt="Solar Logo" 
-              className="w-8 h-8"
+              className="w-10 h-10"
             />
             <span className="font-cinzel text-xl">Solar</span>
           </Link>
