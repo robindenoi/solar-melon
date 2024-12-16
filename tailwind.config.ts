@@ -53,13 +53,13 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: {
-          DEFAULT: "#D4B053", // Extracted from the sun image
+          DEFAULT: "#D4B053",
           light: "#E5C164",
           dark: "#C39F42",
         },
         cream: "#F5F5DC",
         rich: {
-          black: "#000000", // Updated to pure black
+          black: "#000000",
         },
       },
       fontFamily: {
@@ -78,6 +78,10 @@ export default {
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },
           "100%": { backgroundPosition: "-200% 0" },
+        },
+        zoom: {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
         },
       },
       animation: {
