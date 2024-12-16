@@ -7,9 +7,20 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+
+    // Create mailto link with form data
+    const mailtoLink = `mailto:robindrory@gmail.com?subject=Contact Form Submission from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message sent",
-      description: "We'll get back to you soon!",
+      title: "Email client opened",
+      description: "Please send the email through your default email client.",
     });
   };
 
@@ -30,6 +41,7 @@ const Contact = () => {
               <label htmlFor="name" className="block text-gold mb-2 font-cinzel">Name</label>
               <Input
                 id="name"
+                name="name"
                 type="text"
                 className="bg-rich-black border-gold/20 text-gold focus:border-gold"
                 required
@@ -40,6 +52,7 @@ const Contact = () => {
               <label htmlFor="email" className="block text-gold mb-2 font-cinzel">Email</label>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 className="bg-rich-black border-gold/20 text-gold focus:border-gold"
                 required
@@ -50,6 +63,7 @@ const Contact = () => {
               <label htmlFor="message" className="block text-gold mb-2 font-cinzel">Message</label>
               <textarea
                 id="message"
+                name="message"
                 rows={4}
                 className="w-full rounded-md bg-rich-black border border-gold/20 text-gold focus:border-gold p-3 resize-none"
                 required
