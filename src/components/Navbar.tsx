@@ -14,7 +14,7 @@ const Navbar = () => {
             <span className="font-cinzel text-xl">Solar</span>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 font-cinzel">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/products" className="nav-link">Products</Link>
