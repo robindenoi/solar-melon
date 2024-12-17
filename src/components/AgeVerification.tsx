@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Calendar } from "@/components/ui/calendar";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -8,16 +7,11 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { differenceInYears } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
+import DateSelectors from "./DateSelectors";
+import BirthDateCalendar from "./BirthDateCalendar";
 
 interface AgeVerificationProps {
   onVerificationSuccess: () => void;
@@ -50,13 +44,6 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
     }
   };
 
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const years = Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i);
-
   return (
     <AlertDialog open={true}>
       <AlertDialogContent className="bg-rich-black border border-gold/20 w-[95%] max-w-lg mx-auto overflow-hidden">
@@ -71,63 +58,21 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
         </AlertDialogHeader>
         
         <div className="flex flex-col space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto px-2">
-          <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
-            <Select
-              value={month.toString()}
-              onValueChange={(value) => setMonth(parseInt(value))}
-            >
-              <SelectTrigger className="w-full sm:w-[140px] bg-rich-black border-gold/20 text-gold">
-                <SelectValue placeholder="Month" />
-              </SelectTrigger>
-              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px] overflow-y-auto">
-                {months.map((monthName, index) => (
-                  <SelectItem
-                    key={index}
-                    value={index.toString()}
-                    className="text-gold hover:bg-gold/20"
-                  >
-                    {monthName}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <DateSelectors
+            month={month}
+            year={year}
+            setMonth={setMonth}
+            setYear={setYear}
+          />
 
-            <Select
-              value={year.toString()}
-              onValueChange={(value) => setYear(parseInt(value))}
-            >
-              <SelectTrigger className="w-full sm:w-[100px] bg-rich-black border-gold/20 text-gold">
-                <SelectValue placeholder="Year" />
-              </SelectTrigger>
-              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px] overflow-y-auto">
-                {years.map((year) => (
-                  <SelectItem
-                    key={year}
-                    value={year.toString()}
-                    className="text-gold hover:bg-gold/20"
-                  >
-                    {year}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex justify-center">
-            <Calendar
-              mode="single"
-              selected={selectedDate}
-              onSelect={handleDateSelect}
-              disabled={(date) => date > new Date()}
-              defaultMonth={new Date(year, month)}
-              month={new Date(year, month)}
-              onMonthChange={(date) => {
-                setMonth(date.getMonth());
-                setYear(date.getFullYear());
-              }}
-              className="rounded-md border border-gold/20 bg-rich-black text-gold w-full max-w-[350px]"
-            />
-          </div>
+          <BirthDateCalendar
+            selectedDate={selectedDate}
+            handleDateSelect={handleDateSelect}
+            month={month}
+            year={year}
+            setMonth={setMonth}
+            setYear={setYear}
+          />
         </div>
         
         <AlertDialogFooter className="sm:justify-center mt-4">
