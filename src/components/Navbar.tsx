@@ -12,9 +12,9 @@ const Navbar = () => {
   const isMobile = useIsMobile();
 
   return (
-    <nav className="fixed w-full bg-rich-black/90 backdrop-blur-sm z-50 border-b border-gold/20">
-      <div className="container mx-auto px-4 py-2 md:py-4">
-        <div className="flex items-center justify-between">
+    <nav className="fixed top-0 w-full bg-rich-black/90 backdrop-blur-sm z-50 border-b border-gold/20">
+      <div className="container mx-auto px-4 py-2">
+        <div className="flex items-center justify-between h-12 md:h-16">
           <Link to="/" className="flex items-center space-x-2 text-gold hover:text-gold-light transition-colors">
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
