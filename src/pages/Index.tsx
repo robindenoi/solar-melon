@@ -3,11 +3,14 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import AgeVerification from "@/components/AgeVerification";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const navigate = useNavigate();
   const [showAgeVerification, setShowAgeVerification] = useState(true);
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const isAgeVerified = localStorage.getItem("ageVerified");
@@ -17,6 +20,15 @@ const Index = () => {
       setShowAgeVerification(true);
     }
   }, []);
+
+  const handleImageError = () => {
+    setImageError(true);
+    toast({
+      title: "Image Load Error",
+      description: "Unable to load the logo image. Please check the image path.",
+      variant: "destructive",
+    });
+  };
 
   if (showAgeVerification) {
     return <AgeVerification onVerificationSuccess={() => setShowAgeVerification(false)} />;
@@ -31,11 +43,18 @@ const Index = () => {
         
         <div className="container mx-auto px-4 text-center relative">
           <div className="mb-6 md:mb-8">
-            <img 
-              src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
-              alt="Solar Logo" 
-              className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out] animate-float"
-            />
+            {!imageError ? (
+              <img 
+                src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
+                alt="Solar Logo" 
+                className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out] animate-float"
+                onError={handleImageError}
+              />
+            ) : (
+              <div className="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center">
+                <span className="text-gold">Logo</span>
+              </div>
+            )}
           </div>
           
           <h1 className="text-xl md:text-3xl lg:text-4xl font-cinzel font-light mb-8 md:mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80 whitespace-nowrap">
