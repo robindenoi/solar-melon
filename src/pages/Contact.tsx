@@ -12,10 +12,8 @@ const Contact = () => {
     const email = formData.get('email') as string;
     const message = formData.get('message') as string;
 
-    // Create mailto link with form data
     const mailtoLink = `mailto:robindrory@gmail.com?subject=Contact Form Submission from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
     
-    // Open default email client
     window.location.href = mailtoLink;
     
     toast({
@@ -32,7 +30,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-2xl md:text-3xl font-cinzel font-light mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-cinzel font-light mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
             Get in Touch
           </h1>
           
@@ -72,7 +70,7 @@ const Contact = () => {
             
             <button
               type="submit"
-              className="w-full px-8 py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300"
+              className="w-full px-8 py-3 bg-transparent hover:bg-gold text-gold hover:text-rich-black border border-gold font-cinzel font-semibold rounded transition-colors duration-300"
             >
               Send Message
             </button>

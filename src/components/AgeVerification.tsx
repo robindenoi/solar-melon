@@ -79,7 +79,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
           <Button
             variant="outline"
             onClick={() => window.location.href = "https://www.google.com"}
-            className="w-full sm:w-auto border-gold text-gold hover:bg-gold hover:text-rich-black font-cinzel"
+            className="w-full sm:w-auto border-gold text-gold hover:bg-gold hover:text-rich-black font-cinzel transition-colors duration-300"
           >
             Exit Website
           </Button>

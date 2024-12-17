@@ -37,7 +37,7 @@ const Products = () => {
               
               <Button
                 onClick={handleOrder}
-                className="w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold transition-colors duration-300"
+                className="w-full bg-transparent hover:bg-gold text-gold hover:text-rich-black border border-gold font-cinzel font-semibold transition-colors duration-300"
               >
                 Order Here
               </Button>
