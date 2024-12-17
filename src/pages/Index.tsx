@@ -26,11 +26,11 @@ const Index = () => {
     <div className="min-h-screen bg-rich-black">
       <Navbar />
       
-      <section className="min-h-[calc(100vh-80px)] flex items-center justify-center relative overflow-hidden mt-20 md:mt-0">
+      <section className="min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-80px)] flex items-center justify-center relative overflow-hidden mt-16 md:mt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
         <div className="container mx-auto px-4 text-center relative">
-          <div className="mb-8 mt-[-80px] md:mt-0">
+          <div className="mb-6 md:mb-8">
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
               alt="Solar Logo" 
@@ -38,13 +38,13 @@ const Index = () => {
             />
           </div>
           
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-cinzel font-light mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-cinzel font-light mb-8 md:mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
             A Taste of Italian Sunshine
           </h1>
           
           <button 
             onClick={() => navigate('/products')}
-            className="px-8 py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300"
+            className="px-6 md:px-8 py-2.5 md:py-3 bg-gold hover:bg-gold-light text-rich-black font-cinzel font-semibold rounded transition-colors duration-300"
           >
             Explore Our Products
           </button>
