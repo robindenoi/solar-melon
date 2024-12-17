@@ -8,15 +8,15 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
+    const name = encodeURIComponent(formData.get('name') as string);
+    const email = encodeURIComponent(formData.get('email') as string);
+    const message = encodeURIComponent(formData.get('message') as string);
 
-    // Create mailto link with form data
-    const mailtoLink = `mailto:robindrory@gmail.com?subject=Contact Form Submission from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    // Create mailto link with properly encoded form data
+    const mailtoLink = `mailto:robindrory@gmail.com?subject=Contact Form Submission from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
     
-    // Open default email client
-    window.location.href = mailtoLink;
+    // Open in new window/tab to prevent navigation issues
+    window.open(mailtoLink, '_blank');
     
     toast({
       title: "Email client opened",
