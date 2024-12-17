@@ -10,17 +10,14 @@ const Index = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Check if user has already verified their age
     const isAgeVerified = localStorage.getItem("ageVerified");
     if (isAgeVerified) {
       setShowAgeVerification(false);
     } else {
-      // If not verified, force show verification
       setShowAgeVerification(true);
     }
   }, []);
 
-  // Prevent content from showing if age verification is required
   if (showAgeVerification) {
     return <AgeVerification onVerificationSuccess={() => setShowAgeVerification(false)} />;
   }
@@ -29,12 +26,11 @@ const Index = () => {
     <div className="min-h-screen bg-rich-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-[calc(100vh-80px)] flex items-center justify-center relative overflow-hidden mt-20 md:mt-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
         
-        <div className="container mx-auto px-4 pt-20 text-center relative">
-          <div className="mb-8">
+        <div className="container mx-auto px-4 text-center relative">
+          <div className="mb-8 mt-[-80px] md:mt-0">
             <img 
               src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
               alt="Solar Logo" 

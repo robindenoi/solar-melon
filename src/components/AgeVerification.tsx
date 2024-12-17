@@ -59,8 +59,8 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
 
   return (
     <AlertDialog open={true}>
-      <AlertDialogContent className="bg-rich-black border border-gold/20 w-[95%] max-w-lg mx-auto">
-        <AlertDialogHeader>
+      <AlertDialogContent className="bg-rich-black border border-gold/20 w-[95%] max-w-lg mx-auto overflow-hidden">
+        <AlertDialogHeader className="mb-4">
           <AlertDialogTitle className="text-gold font-cinzel text-xl text-center">
             Age Verification Required
           </AlertDialogTitle>
@@ -70,7 +70,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto px-2">
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
             <Select
               value={month.toString()}
@@ -79,7 +79,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
               <SelectTrigger className="w-full sm:w-[140px] bg-rich-black border-gold/20 text-gold">
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
-              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px]">
+              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px] overflow-y-auto">
                 {months.map((monthName, index) => (
                   <SelectItem
                     key={index}
@@ -99,7 +99,7 @@ const AgeVerification = ({ onVerificationSuccess }: AgeVerificationProps) => {
               <SelectTrigger className="w-full sm:w-[100px] bg-rich-black border-gold/20 text-gold">
                 <SelectValue placeholder="Year" />
               </SelectTrigger>
-              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px]">
+              <SelectContent className="bg-rich-black border-gold/20 max-h-[200px] overflow-y-auto">
                 {years.map((year) => (
                   <SelectItem
                     key={year}
