@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const ProductInfo = () => {
@@ -25,19 +24,9 @@ const ProductInfo = () => {
                 A Taste of Italian Sunshine
               </h1>
               
-              <p className="text-lg md:text-xl text-gold/90 leading-relaxed">
+              <p className="text-base md:text-lg text-gold/90 leading-relaxed font-inter">
                 Experience the exquisite blend of premium spirits and natural melon essence in our Solar Melon liqueur. Crafted with passion and precision, this 17% alcohol beverage offers a perfect balance of sweetness and sophistication.
               </p>
-              
-              <Button
-                onClick={() => {
-                  const element = document.getElementById('special-offer');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-gold hover:bg-gold-light text-rich-black font-cinzel text-lg px-8 py-6"
-              >
-                View Special Offer
-              </Button>
             </div>
           </div>
         </section>
