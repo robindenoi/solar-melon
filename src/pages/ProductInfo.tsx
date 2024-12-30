@@ -47,12 +47,6 @@ const ProductInfo = () => {
                   <p className="text-3xl font-cinzel text-gold mb-4">€16,50 ex</p>
                   <div className="space-y-2">
                     <p className="text-gold mb-2">Order: orders@dewijnschuur.nl</p>
-                    <a
-                      href="mailto:orders@dewijnschuur.nl"
-                      className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
-                    >
-                      Order
-                    </a>
                   </div>
                 </div>
 
@@ -71,12 +65,6 @@ const ProductInfo = () => {
                   
                   <div className="space-y-2">
                     <p className="text-gold mb-2">Order: orders@dewijnschuur.nl</p>
-                    <a
-                      href="mailto:orders@dewijnschuur.nl"
-                      className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
-                    >
-                      Order
-                    </a>
                   </div>
                 </div>
               </div>
