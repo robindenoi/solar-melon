@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -7,17 +6,23 @@ const ProductInfo = () => {
 
   return (
     <div className="min-h-screen bg-rich-black">
-      <Navbar />
-      
-      <div className="pt-24 pb-16">
+      <div className="pt-8 pb-16">
         {/* First Section - Brand & Product Intro */}
         <section className="min-h-screen flex items-center relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
           
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-gold animate-fade-in">
-                Solar Melon
+              <div className="mb-6 md:mb-8">
+                <img 
+                  src="/lovable-uploads/217f3b39-982e-4aa3-9b55-063a8d46eec2.png" 
+                  alt="Solar Logo" 
+                  className="w-16 h-16 mx-auto animate-[zoom_1s_ease-out] animate-float"
+                />
+              </div>
+              
+              <h1 className="text-xl md:text-3xl lg:text-4xl font-cinzel font-light mb-8 md:mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80 whitespace-nowrap">
+                A Taste of Italian Sunshine
               </h1>
               
               <p className="text-lg md:text-xl text-gold/90 leading-relaxed">
