@@ -44,7 +44,7 @@ const ProductInfo = () => {
                     alt="Solar Melon Bottle" 
                     className="w-32 mx-auto mb-4"
                   />
-                  <p className="text-3xl font-cinzel text-gold mb-1">€16,50 excl. btw</p>
+                  <p className="text-3xl font-cinzel text-gold mb-1">€16,50 <span className="text-sm">excl. btw</span></p>
                   <div className="space-y-2">
                     <p className="text-gold mb-2">Order: orders@dewijnschuur.nl</p>
                   </div>
