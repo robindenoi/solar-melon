@@ -20,11 +20,11 @@ const ProductInfo = () => {
                 />
               </div>
               
-              <h1 className="text-xl md:text-3xl lg:text-4xl font-cinzel font-light mb-8 md:mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80 whitespace-nowrap">
+              <h1 className="text-lg md:text-2xl lg:text-3xl font-cinzel font-light mb-6 md:mb-10 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80">
                 Solar - A Taste of Italian Sunshine
               </h1>
               
-              <p className="text-base md:text-lg text-gold/90 leading-relaxed font-inter">
+              <p className="text-sm md:text-base text-gold/90 leading-relaxed font-inter">
                 Experience the exquisite blend of premium spirits and natural melon essence in our Solar Melon liqueur. Crafted with passion and precision, this 17% alcohol beverage offers a perfect balance of sweetness and sophistication.
               </p>
             </div>
