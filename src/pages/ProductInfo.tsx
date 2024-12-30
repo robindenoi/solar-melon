@@ -59,8 +59,8 @@ const ProductInfo = () => {
                   <h3 className="text-2xl font-cinzel text-gold mb-4">Bulk Order Special</h3>
                   <div className="space-y-2 mb-6">
                     <p className="text-xl text-gold/90">Order 23 Bottles</p>
-                    <p className="text-2xl font-cinzel text-gold">Get 2 Extra Bottles</p>
-                    <p className="text-gold/80">FREE</p>
+                    <p className="text-2xl font-cinzel text-gold">Get 2 Bottles</p>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent animate-shimmer">FREE</p>
                   </div>
                   
                   <div className="space-y-2">
