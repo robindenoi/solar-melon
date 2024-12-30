@@ -56,12 +56,12 @@ const ProductInfo = () => {
                     className="w-32 mx-auto mb-4"
                   />
                   <p className="text-3xl font-cinzel text-gold mb-4">€16,50</p>
-                  <Button
-                    onClick={() => navigate('/products')}
-                    className="w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel"
+                  <a
+                    href="mailto:orders@dewijnschuur.nl"
+                    className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
                   >
-                    Order Now
-                  </Button>
+                    Order via Email
+                  </a>
                 </div>
 
                 {/* Special Offer */}
@@ -77,12 +77,12 @@ const ProductInfo = () => {
                     <p className="text-gold/80">FREE</p>
                   </div>
                   
-                  <Button
-                    onClick={() => navigate('/products')}
-                    className="w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel"
+                  <a
+                    href="mailto:orders@dewijnschuur.nl"
+                    className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
                   >
-                    Claim Offer
-                  </Button>
+                    Order via Email
+                  </a>
                 </div>
               </div>
             </div>
