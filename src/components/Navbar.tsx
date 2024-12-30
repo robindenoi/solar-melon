@@ -38,6 +38,11 @@ const Navbar = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link to="/product-info" className="text-gold hover:text-gold-light w-full font-cinzel">
+                    Special Offer
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link to="/products" className="text-gold hover:text-gold-light w-full font-cinzel">
                     Products
                   </Link>
@@ -52,6 +57,7 @@ const Navbar = () => {
           ) : (
             <div className="hidden md:flex items-center space-x-8 font-cinzel">
               <Link to="/" className="nav-link">Home</Link>
+              <Link to="/product-info" className="nav-link">Special Offer</Link>
               <Link to="/products" className="nav-link">Products</Link>
               <Link to="/contact" className="nav-link">Contact</Link>
             </div>

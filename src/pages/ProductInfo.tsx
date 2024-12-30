@@ -1,0 +1,91 @@
+import Navbar from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+
+const ProductInfo = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen bg-rich-black">
+      <Navbar />
+      
+      <div className="pt-24 pb-16">
+        {/* First Section - Brand & Product Intro */}
+        <section className="min-h-screen flex items-center relative">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
+          
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-gold animate-fade-in">
+                Solar Melon
+              </h1>
+              
+              <p className="text-lg md:text-xl text-gold/90 leading-relaxed">
+                Experience the exquisite blend of premium spirits and natural melon essence in our Solar Melon liqueur. Crafted with passion and precision, this 17% alcohol beverage offers a perfect balance of sweetness and sophistication.
+              </p>
+              
+              <Button
+                onClick={() => {
+                  const element = document.getElementById('special-offer');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-gold hover:bg-gold-light text-rich-black font-cinzel text-lg px-8 py-6"
+              >
+                View Special Offer
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Second Section - Pricing & Special Offer */}
+        <section id="special-offer" className="min-h-screen flex items-center relative">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Single Bottle */}
+                <div className="bg-rich-black/50 backdrop-blur-sm border border-gold/20 rounded-lg p-8 text-center">
+                  <h3 className="text-2xl font-cinzel text-gold mb-4">Single Bottle</h3>
+                  <img 
+                    src="/lovable-uploads/0d6985b6-d515-4d2e-9d79-8c8ad3bb0406.png"
+                    alt="Solar Melon Bottle" 
+                    className="w-32 mx-auto mb-4"
+                  />
+                  <p className="text-3xl font-cinzel text-gold mb-4">€16,50</p>
+                  <Button
+                    onClick={() => navigate('/products')}
+                    className="w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel"
+                  >
+                    Order Now
+                  </Button>
+                </div>
+
+                {/* Special Offer */}
+                <div className="bg-gold/10 backdrop-blur-sm border border-gold/20 rounded-lg p-8 text-center relative overflow-hidden">
+                  <div className="absolute top-2 right-2 rotate-12 bg-gold text-rich-black px-4 py-1 text-sm font-bold">
+                    Special Offer
+                  </div>
+                  
+                  <h3 className="text-2xl font-cinzel text-gold mb-4">Bulk Order Special</h3>
+                  <div className="space-y-2 mb-6">
+                    <p className="text-xl text-gold/90">Order 23 Bottles</p>
+                    <p className="text-2xl font-cinzel text-gold">Get 2 Extra Bottles</p>
+                    <p className="text-gold/80">FREE</p>
+                  </div>
+                  
+                  <Button
+                    onClick={() => navigate('/products')}
+                    className="w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel"
+                  >
+                    Claim Offer
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default ProductInfo;
