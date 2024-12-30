@@ -44,13 +44,16 @@ const ProductInfo = () => {
                     alt="Solar Melon Bottle" 
                     className="w-32 mx-auto mb-4"
                   />
-                  <p className="text-3xl font-cinzel text-gold mb-4">€16,50</p>
-                  <a
-                    href="mailto:orders@dewijnschuur.nl"
-                    className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
-                  >
-                    Order via Email
-                  </a>
+                  <p className="text-3xl font-cinzel text-gold mb-4">€16,50 ex</p>
+                  <div className="space-y-2">
+                    <p className="text-gold mb-2">Order: orders@dewijnschuur.nl</p>
+                    <a
+                      href="mailto:orders@dewijnschuur.nl"
+                      className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
+                    >
+                      Order
+                    </a>
+                  </div>
                 </div>
 
                 {/* Special Offer */}
@@ -66,12 +69,15 @@ const ProductInfo = () => {
                     <p className="text-gold/80">FREE</p>
                   </div>
                   
-                  <a
-                    href="mailto:orders@dewijnschuur.nl"
-                    className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
-                  >
-                    Order via Email
-                  </a>
+                  <div className="space-y-2">
+                    <p className="text-gold mb-2">Order: orders@dewijnschuur.nl</p>
+                    <a
+                      href="mailto:orders@dewijnschuur.nl"
+                      className="inline-block w-full bg-gold hover:bg-gold-light text-rich-black font-cinzel py-2 px-4 rounded-md transition-colors duration-300"
+                    >
+                      Order
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
