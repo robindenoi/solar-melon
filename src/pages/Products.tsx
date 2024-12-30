@@ -7,8 +7,31 @@ const Products = () => {
 
   const handleOrder = () => {
     toast({
-      title: "Order Initiated",
-      description: "Thank you for your interest! We'll contact you soon about your order.",
+      title: "How to Order",
+      description: (
+        <div className="space-y-2 mt-2">
+          <p>Please contact us via:</p>
+          <p>
+            Email:{" "}
+            <a 
+              href="mailto:info@dewijnschuur.nl"
+              className="text-gold hover:text-gold-light underline transition-colors duration-300"
+            >
+              info@dewijnschuur.nl
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a 
+              href="tel:+31631916064"
+              className="text-gold hover:text-gold-light underline transition-colors duration-300"
+            >
+              +31 6 31 91 60 64
+            </a>
+          </p>
+        </div>
+      ),
+      duration: 10000,
     });
   };
 
@@ -33,7 +56,7 @@ const Products = () => {
             <div className="p-6 text-center">
               <h3 className="text-xl font-cinzel text-gold mb-2">Solar Melon</h3>
               <p className="text-gold/80 mb-2 text-sm font-light">17% Alcohol</p>
-              <p className="text-gold mb-4 font-cinzel">€45.00</p>
+              <p className="text-gold mb-4 font-cinzel">€16,50</p>
               
               <Button
                 onClick={handleOrder}
