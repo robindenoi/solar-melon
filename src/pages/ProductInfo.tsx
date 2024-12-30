@@ -21,7 +21,7 @@ const ProductInfo = () => {
               </div>
               
               <h1 className="text-xl md:text-3xl lg:text-4xl font-cinzel font-light mb-8 md:mb-12 bg-gradient-to-r from-gold-light via-gold to-gold-light bg-clip-text text-transparent opacity-80 whitespace-nowrap">
-                A Taste of Italian Sunshine
+                Solar - A Taste of Italian Sunshine
               </h1>
               
               <p className="text-base md:text-lg text-gold/90 leading-relaxed font-inter">
