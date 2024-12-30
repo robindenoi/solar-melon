@@ -15,13 +15,13 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Navigate to="/product-info" replace />} />
+          <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product-info" element={<ProductInfo />} />
-          <Route path="*" element={<Navigate to="/product-info" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
