@@ -24,7 +24,7 @@ const ProductInfo = () => {
                 A Taste of Italian Sunshine
               </h1>
               
-              <p className="text-base md:text-lg text-gold/90 leading-relaxed font-inter">
+              <p className="text-base md:text-lg text-gold/90 leading-relaxed font-cinzel">
                 Experience the exquisite blend of premium spirits and natural melon essence in our Solar Melon liqueur. Crafted with passion and precision, this 17% alcohol beverage offers a perfect balance of sweetness and sophistication.
               </p>
             </div>
